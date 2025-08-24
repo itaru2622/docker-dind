@@ -10,4 +10,4 @@ RUN  curl -L https://download.docker.com/linux/debian/gpg > /etc/apt/trusted.gpg
 RUN  apt update; apt install -y docker-ce docker-ce-cli docker-compose-plugin kmod    iproute2 iptables
 
 RUN echo "set mouse-=a" > /root/.vimrc;
-
+ENV DOCKER_DRIVER=vfs
