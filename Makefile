@@ -37,3 +37,10 @@ stop:
 
 bash:
 	docker exec -it ${cName} /bin/bash
+
+cstart:
+	img=${img} docker-compose up -d
+cstop:
+	img=${img} docker-compose down -v
+cbash:
+	img=${img} docker-compose exec dind /bin/bash
