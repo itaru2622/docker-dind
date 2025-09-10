@@ -1,0 +1,8 @@
+services:
+  dind:
+    image: ${img}
+    privileged: true
+    command: /usr/bin/dockerd
+#   command: tail -f /dev/null
+    volumes:
+      - /etc/resolv.conf:/etc/resolv.conf
